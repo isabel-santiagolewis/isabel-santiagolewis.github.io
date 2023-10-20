@@ -1,6 +1,63 @@
 body{
-    background-color: aqua;
+    background-color:rgb(175, 173, 173);
+    height: 100vh;
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "MyImage about about"
+    "ProjectImage project project"
+    "footer footer footer";
+    grid-template-rows: 125px 50px auto 600px 50px;
+    grid-template-columns: 50% auto auto;
+    margin:0;
 }
-img{
-    height: 50px;
+header{
+    /*background-color: blue;*/
+    grid-area: header;
+    text-align: center;
+    padding-top: 50px;
+}
+nav{
+    /*background-color: blueviolet;*/
+    grid-area: nav;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.MyImages img{
+    height: 300px;
+    width: 400px;
+    grid-area: MyImage;
+}
+.MyImages{
+    display: flex;
+    flex-direction:column;
+    align-items: end;
+    padding-top: 25px;
+    background-color: rgb(236, 226, 226);
+}
+.About{
+    /*background-color: burlywood;*/
+    grid-area: about;
+    padding-top: 25px;
+}
+
+.AboutContent{
+    padding-left: 50px;
+    padding-top: 25px;
+    width: 500px;
+    background-color: rgb(80, 77, 77);
+}
+
+.ProjectsClass{
+    /*background-color: darkcyan;*/
+    grid-area: project;
+}
+footer{
+    grid-area: footer;
+    /*background-color: coral;*/
+    text-align: center;
 }
