@@ -13,9 +13,6 @@ body{
     margin:0;
     color:whitesmoke;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    border-left: white;
-    border-left-width:5px;
-    border-left-style:double;
 }
 
 nav{
