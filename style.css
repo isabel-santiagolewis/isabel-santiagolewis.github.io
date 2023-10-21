@@ -1,63 +1,88 @@
 body{
-    background-color:rgb(175, 173, 173);
+    background-color: black;
     height: 100vh;
     display:grid;
     grid-template-areas:
-    "header header header"
     "nav nav nav"
-    "MyImage about about"
-    "ProjectImage project project"
+    "header header header"
+    "MyCartoon MyCartoon MyCartoon"
+    "about about about"
+    "project project project"
     "footer footer footer";
-    grid-template-rows: 125px 50px auto 600px 50px;
-    grid-template-columns: 50% auto auto;
+    grid-template-rows: 50px 150px auto auto auto 50px;
     margin:0;
+    color:whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-left: white;
+    border-left-width:5px;
+    border-left-style:double;
 }
+
+nav{
+    grid-area: nav;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    gap: 50px;
+    margin-right: 5%;
+}
+nav ul li{
+    border-top-color: white;
+    border-top-width:5px;
+    border-top-style: dashed;
+}
+
+
 header{
     /*background-color: blue;*/
     grid-area: header;
     text-align: center;
     padding-top: 50px;
 }
-nav{
-    /*background-color: blueviolet;*/
-    grid-area: nav;
+
+
+.MyCartoon{
+    grid-area: MyCartoon;
+    text-align: center;
 }
-nav ul{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-}
-.MyImages img{
+.MyCartoon img {
     height: 300px;
     width: 400px;
-    grid-area: MyImage;
 }
-.MyImages{
-    display: flex;
-    flex-direction:column;
-    align-items: end;
-    padding-top: 25px;
-    background-color: rgb(236, 226, 226);
-}
+
 .About{
-    /*background-color: burlywood;*/
     grid-area: about;
-    padding-top: 25px;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
 }
 
-.AboutContent{
-    padding-left: 50px;
-    padding-top: 25px;
-    width: 500px;
-    background-color: rgb(80, 77, 77);
-}
 
+#Projects{
+    grid-area: project;
+    text-align: center;
+}
 .ProjectsClass{
     /*background-color: darkcyan;*/
     grid-area: project;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 5%;
 }
 footer{
     grid-area: footer;
     /*background-color: coral;*/
     text-align: center;
+}
+li a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+li{
+    list-style-type: none;
 }
